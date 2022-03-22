@@ -38,6 +38,16 @@ RUN cd ceres-solver && \
 	make -j4 && \
 	make install
 
+RUN git clone https://github.com/NVIDIA/libglvnd
+RUN apt-get install -y libxext-dev libx11-dev x11proto-gl-dev
+RUN cd libglvnd && \
+        apt-get install -y autoconf automake libtool && \
+        apt-get install -y libffi-dev && \
+        ./autogen.sh && \
+        ./configure && \
+	make -j4 && \
+	make install
+
 # Build and install COLMAP
 
 # Note: This Dockerfile has been tested using COLMAP pre-release 3.7.
