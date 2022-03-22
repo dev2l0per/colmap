@@ -44,7 +44,7 @@ RUN cd ceres-solver && \
 # have problems using the environment described thus far. If you encounter
 # problems and want to install the tested release, then uncomment the branch
 # specification in the line below
-RUN git clone https://github.com/colmap/colmap.git #--branch 3.7
+RUN git clone https://github.com/colmap/colmap.git --branch 3.7
 
 RUN cd colmap && \
 	git checkout dev && \
