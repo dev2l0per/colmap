@@ -24,7 +24,8 @@ RUN apt-get update && apt-get install -y \
     libqt5opengl5-dev \
     libcgal-dev \
     libcgal-qt5-dev \
-    libmetis-dev
+    libmetis-dev \
+    python3.8
 
 # Build and install ceres solver
 RUN apt-get -y install \
