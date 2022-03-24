@@ -25,7 +25,6 @@ RUN apt-get update && apt-get install -y \
     libcgal-dev \
     libcgal-qt5-dev \
     libmetis-dev \
-    python3.8
 
 # Build and install ceres solver
 RUN apt-get -y install \
@@ -56,7 +55,7 @@ RUN cd libglvnd && \
 # have problems using the environment described thus far. If you encounter
 # problems and want to install the tested release, then uncomment the branch
 # specification in the line below
-RUN git clone https://github.com/colmap/colmap.git --branch 3.7
+RUN git clone https://github.com/colmap/colmap.git
 
 RUN cd colmap && \
 	git checkout dev && \
